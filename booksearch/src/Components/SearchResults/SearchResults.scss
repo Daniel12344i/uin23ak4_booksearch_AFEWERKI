@@ -1,0 +1,29 @@
+
+
+.search-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin: 0;
+  }
+  
+  .error-message {
+    color: red;
+    margin: 20px 0;
+  }
+  
+
+  
+
+  @media (max-width: 600px) {
+    .search-results {
+      gap: 10px;
+      justify-content: center;
+    }
+  }
+
+  body{
+    background-color: black;
+    background-image:none ;
+  }

@@ -1,0 +1,70 @@
+.book-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Endret fra space-around til space-between */
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 200px;
+  text-align: center;
+  background-color: #fbf6f6;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-top: 20px;
+
+  &:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+}
+
+.book-cover {
+  object-fit: cover; /* Endret fra contain til cover for å dekke området */
+  width: 100%; /* Full bredde */
+  height: 80%; /* Juster denne verdien etter behov for å dekke ønsket høyde */
+}
+
+.book-card h3, .book-card p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 1.2em;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.p-3 {
+  padding: 3px !important;
+}
+
+.book-card a {
+  display: inline-block;
+  padding: 5px;
+  background-color: #ff9900;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 5px;
+  margin-top: auto;
+
+  &:hover {
+    background-color: #cc7a00;
+  }
+}
+
+@media (max-width: 600px) {
+  .book-card {
+      width: 150px;
+      min-height: 350px; /* Legger til min-høyde */
+      padding: 10px;
+  }
+
+  .book-card h3 {
+      font-size: 1em;
+  }
+
+  .book-card p {
+      font-size: 0.8em;
+  }
+}
